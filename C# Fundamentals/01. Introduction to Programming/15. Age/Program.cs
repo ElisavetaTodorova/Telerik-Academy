@@ -8,17 +8,24 @@ namespace _15.Age
 {
     class Program
     {
-        //Fix it later
         static void Main(string[] args)
         {
             DateTime userBirthday = DateTime.Parse(Console.ReadLine());
-            DateTime timeToday = DateTime.Today;
-            long period = timeToday.Subtract(userBirthday).Ticks;
-            int years = new DateTime(period).Year - 1;
-            Console.WriteLine(years);
-            int futureYears = years + 10;
-            Console.WriteLine(futureYears);
+            int usersAge = GetAge(userBirthday);
+            int usersAgeAfterTenYears = usersAge + 10;
+            Console.WriteLine(usersAge);
+            Console.WriteLine(usersAgeAfterTenYears);
 
+        }
+
+        public static int GetAge(DateTime dateOfBirth)
+        {
+            var today = DateTime.Today;
+
+            var a = (today.Year * 100 + today.Month) * 100 + today.Day;
+            var b = (dateOfBirth.Year * 100 + dateOfBirth.Month) * 100 + dateOfBirth.Day;
+
+            return (a - b) / 10000;
         }
     }
 }
