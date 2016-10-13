@@ -10,22 +10,35 @@ namespace _15.Age
     {
         static void Main(string[] args)
         {
-            DateTime userBirthday = DateTime.Parse(Console.ReadLine());
-            int usersAge = GetAge(userBirthday);
-            int usersAgeAfterTenYears = usersAge + 10;
-            Console.WriteLine(usersAge);
-            Console.WriteLine(usersAgeAfterTenYears);
+            var param = Console.ReadLine().Split('.').Select(int.Parse).ToArray();
+            var day = param[1];
+            var mounth = param[0];
+            var year = param[2];
+            var userBirthDate = new DateTime(year, mounth, day);
+            var currentDate = DateTime.Now;
+            int age = 0;
+            if (currentDate.Month > userBirthDate.Month)
+            {
+                age = currentDate.Year - userBirthDate.Year;
+                Console.WriteLine(age);
+            }
+            else if (currentDate.Month == userBirthDate.Month && currentDate.Day >= userBirthDate.Day)
+            {
+                age = currentDate.Year - userBirthDate.Year;
+                Console.WriteLine(age);
+            }
+            else if (currentDate.Month == userBirthDate.Month && currentDate.Day < userBirthDate.Day)
+            {
+                age = currentDate.Year - userBirthDate.Year - 1;
+                Console.WriteLine(age);
+            }
+            else
+            {
+                age = currentDate.Year - userBirthDate.Year - 1;
+                Console.WriteLine(age);
+            }
+            Console.WriteLine(age + 10);
 
-        }
-
-        public static int GetAge(DateTime dateOfBirth)
-        {
-            var today = DateTime.Today;
-
-            var a = (today.Year * 100 + today.Month) * 100 + today.Day;
-            var b = (dateOfBirth.Year * 100 + dateOfBirth.Month) * 100 + dateOfBirth.Day;
-
-            return (a - b) / 10000;
         }
     }
 }
