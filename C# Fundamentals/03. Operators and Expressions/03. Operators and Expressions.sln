@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.N-thBit", "12.N-thBit\12
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.ModifyBit", "13.ModifyBit\13.ModifyBit.csproj", "{6F149B79-61D9-4B77-A08D-1FC1EC19B8B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.BitExchange", "14.BitExchange\14.BitExchange.csproj", "{31B53259-F928-4A85-9147-B152CF1B5655}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.BitSwap", "15.BitSwap\15.BitSwap.csproj", "{30F27A49-1B04-4381-ABD3-2DA642296A71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,14 @@ Global
 		{6F149B79-61D9-4B77-A08D-1FC1EC19B8B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F149B79-61D9-4B77-A08D-1FC1EC19B8B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F149B79-61D9-4B77-A08D-1FC1EC19B8B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31B53259-F928-4A85-9147-B152CF1B5655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31B53259-F928-4A85-9147-B152CF1B5655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31B53259-F928-4A85-9147-B152CF1B5655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31B53259-F928-4A85-9147-B152CF1B5655}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30F27A49-1B04-4381-ABD3-2DA642296A71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30F27A49-1B04-4381-ABD3-2DA642296A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30F27A49-1B04-4381-ABD3-2DA642296A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30F27A49-1B04-4381-ABD3-2DA642296A71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
