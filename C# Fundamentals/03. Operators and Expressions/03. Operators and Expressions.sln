@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.ThirdDigit", "05.ThirdDi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.FourDigits", "06.FourDigits\06.FourDigits.csproj", "{A99B2BB0-08D7-4DA6-A73A-6F4E00444551}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.PointInCircle", "07.PointInCircle\07.PointInCircle.csproj", "{5AF2091A-6D5F-4557-87BC-E4E4F09EB3CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.PrimeCheck", "08.PrimeCheck\08.PrimeCheck.csproj", "{06987220-F33F-4DB2-8972-7326773B97C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{A99B2BB0-08D7-4DA6-A73A-6F4E00444551}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A99B2BB0-08D7-4DA6-A73A-6F4E00444551}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A99B2BB0-08D7-4DA6-A73A-6F4E00444551}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AF2091A-6D5F-4557-87BC-E4E4F09EB3CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AF2091A-6D5F-4557-87BC-E4E4F09EB3CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AF2091A-6D5F-4557-87BC-E4E4F09EB3CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AF2091A-6D5F-4557-87BC-E4E4F09EB3CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06987220-F33F-4DB2-8972-7326773B97C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06987220-F33F-4DB2-8972-7326773B97C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06987220-F33F-4DB2-8972-7326773B97C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06987220-F33F-4DB2-8972-7326773B97C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
