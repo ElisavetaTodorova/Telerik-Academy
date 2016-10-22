@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.NotDevisibleNumbers", "0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.MMSA", "03.MMSA\03.MMSA.csproj", "{EFA23EC7-5777-4733-8CFB-3FF4ABB94B20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.PrintDesk", "04.PrintDesk\04.PrintDesk.csproj", "{FD7C5D56-4328-4D9F-BA8E-9CBD419D1AD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Calculate!", "05.Calculate!\05.Calculate!.csproj", "{77BF7D51-1504-4C80-BF03-03A2E02798E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{EFA23EC7-5777-4733-8CFB-3FF4ABB94B20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFA23EC7-5777-4733-8CFB-3FF4ABB94B20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFA23EC7-5777-4733-8CFB-3FF4ABB94B20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD7C5D56-4328-4D9F-BA8E-9CBD419D1AD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD7C5D56-4328-4D9F-BA8E-9CBD419D1AD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD7C5D56-4328-4D9F-BA8E-9CBD419D1AD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD7C5D56-4328-4D9F-BA8E-9CBD419D1AD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77BF7D51-1504-4C80-BF03-03A2E02798E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77BF7D51-1504-4C80-BF03-03A2E02798E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77BF7D51-1504-4C80-BF03-03A2E02798E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77BF7D51-1504-4C80-BF03-03A2E02798E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

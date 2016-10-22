@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 
 namespace _10.FibonacciNumbers
 {
@@ -9,22 +10,22 @@ namespace _10.FibonacciNumbers
         {
             var n = int.Parse(Console.ReadLine());
 
-            var numbers = new LinkedList<int>();
+            var numbers = new LinkedList<BigInteger>();
 
             if (n == 1)
             {
                 Console.WriteLine(0);
                 return;
             }
-            var firstNumber = 0;
-            var secondNumber = 1;
+            BigInteger firstNumber = 0;
+            BigInteger secondNumber = 1;
 
             numbers.AddLast(firstNumber);
-            numbers.AddLast(firstNumber);
+            numbers.AddLast(secondNumber);
 
             for (int i = 2; i < n; i++)
             {
-                var numberToAdd = firstNumber + secondNumber;
+                BigInteger numberToAdd = firstNumber + secondNumber;
                 firstNumber = secondNumber;
                 secondNumber = numberToAdd;
 
