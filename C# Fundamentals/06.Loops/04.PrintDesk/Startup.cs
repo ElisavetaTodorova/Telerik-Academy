@@ -6,10 +6,13 @@ namespace _04.PrintDesk
     {
         public static void Main()
         {
+            var card = Console.ReadLine();
             var cardSuits = new string[] { "spades", "clubs", "hearts", "diamonds" };
             var cardFaces = new string[] { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A" };
 
-            for (int i = 0; i < cardFaces.Length; i++)
+            int index = Array.IndexOf(cardFaces, card);
+
+            for (int i = 0; i < index + 1; i++)
             {
                 for (int j = 0; j < cardSuits.Length; j++)
                 {

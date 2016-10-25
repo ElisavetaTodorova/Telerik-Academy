@@ -18,9 +18,13 @@ namespace _15.GCD
             while (a != 0 && b != 0)
             {
                 if (a > b)
+                {
                     a %= b;
+                }
                 else
+                {
                     b %= a;
+                }
             }
 
             if (a == 0)
