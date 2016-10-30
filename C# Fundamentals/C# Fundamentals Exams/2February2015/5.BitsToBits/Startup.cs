@@ -12,8 +12,9 @@ namespace _5.BitsToBits
             var sb = new StringBuilder();
             for (int i = 0; i < n; i++)
             {
-                var num = long.Parse(Console.ReadLine());
-                sb.Append(Convert.ToString(num, 2).PadLeft(30, '0'));
+                var num = int.Parse(Console.ReadLine());
+                var str = Convert.ToString(num, 2).PadLeft(30, '0').Substring(0, 30);
+                sb.Append(str);
             }
 
             int zeroCount = 1;
@@ -56,6 +57,43 @@ namespace _5.BitsToBits
                 }
             }
 
+            ////Console.WriteLine(maxZeroCount);
+            ////Console.WriteLine(maxOnesCount);
+
+            ////onesCount = 1;
+            ////zeroCount = 1;
+            ////maxOnesCount = 0;
+            ////maxZeroCount = 0;
+            //for (int i = 0; i < sb.Length - 1; i++)
+            //{
+            //    if (sb[i] == sb[i + 1])
+            //    {
+            //        if (sb[i] == '1')
+            //        {
+            //            onesCount++;
+            //        }
+            //        else
+            //        {
+            //            zeroCount++;
+            //        }
+            //    }
+            //    else
+            //    {
+            //        if (sb[i] == '1')
+            //        {
+            //            maxOnesCount = Math.Max(maxOnesCount, onesCount);
+            //            onesCount = 1;
+            //        }
+            //        else
+            //        {
+            //            maxZeroCount = Math.Max(maxZeroCount, zeroCount);
+            //            zeroCount = 1;
+            //        }
+            //    }
+            //}
+
+            maxZeroCount = Math.Max(zeroCount, maxZeroCount);
+            maxOnesCount = Math.Max(onesCount, maxOnesCount);
             Console.WriteLine(maxZeroCount);
             Console.WriteLine(maxOnesCount);
         }
