@@ -1,25 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Numerics;
 
-namespace _3.ConsoleApplication1
+namespace _3.ConsoleApplication2
 {
     class Startup
     {
         static void Main()
         {
             BigInteger globalMultiplication = 1;
+
             int index = 0;
 
             while (true)
             {
-                BigInteger multiplication = 1;
+                BigInteger currentMultiplication = 1;
+
                 var line = Console.ReadLine();
+
 
                 if (line == "END")
                 {
                     break;
                 }
+
+
+                long number = long.Parse(line);
 
                 if (index == 10)
                 {
@@ -27,25 +32,25 @@ namespace _3.ConsoleApplication1
                     globalMultiplication = 1;
                 }
 
-                var number = long.Parse(line);
-
-                if (index % 2 != 0)
+                if(index % 2 == 0)
                 {
                     while (number > 0)
                     {
                         var digit = number % 10;
+
                         if (digit != 0)
                         {
-                            multiplication *= digit;
+                            currentMultiplication *= digit;
                         }
-                        
+
                         number /= 10;
                     }
-
-                    globalMultiplication *= multiplication;
                 }
 
+                globalMultiplication *= currentMultiplication;
                 index++;
+
+
             }
 
             Console.WriteLine(globalMultiplication);

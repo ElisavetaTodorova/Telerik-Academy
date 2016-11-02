@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.Decoding", "2.Decoding\2.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.ConsoleApplication1", "3.ConsoleApplication1\3.ConsoleApplication1.csproj", "{29639FED-20C8-4ABF-A568-869A9435279F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.SearchInBits", "5.SearchInBits\5.SearchInBits.csproj", "{CA8CA761-A51F-49A2-BDAB-0EFA53B5A382}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{29639FED-20C8-4ABF-A568-869A9435279F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29639FED-20C8-4ABF-A568-869A9435279F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29639FED-20C8-4ABF-A568-869A9435279F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA8CA761-A51F-49A2-BDAB-0EFA53B5A382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA8CA761-A51F-49A2-BDAB-0EFA53B5A382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA8CA761-A51F-49A2-BDAB-0EFA53B5A382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA8CA761-A51F-49A2-BDAB-0EFA53B5A382}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

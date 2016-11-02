@@ -18,5 +18,6 @@ namespace _1.ThreeNumbers
             Console.WriteLine(arr.Min());
             Console.WriteLine("{0:F2}", arr.Average());
         }
+
     }
 }
