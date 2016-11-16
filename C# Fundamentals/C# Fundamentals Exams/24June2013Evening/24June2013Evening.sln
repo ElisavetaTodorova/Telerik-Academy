@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.Garden", "1.Garden\1.Garden.csproj", "{540D6C6C-0252-44E3-AAB4-AD59A9ECC13E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.Secrets", "2.Secrets\2.Secrets.csproj", "{934949B3-FB87-46CF-9F1D-FAA170745EEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.CardWarsBatka", "3.CardWarsBatka\3.CardWarsBatka.csproj", "{64F7A980-7077-4269-93F2-423419FA505B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{540D6C6C-0252-44E3-AAB4-AD59A9ECC13E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{540D6C6C-0252-44E3-AAB4-AD59A9ECC13E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{540D6C6C-0252-44E3-AAB4-AD59A9ECC13E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{540D6C6C-0252-44E3-AAB4-AD59A9ECC13E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{934949B3-FB87-46CF-9F1D-FAA170745EEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{934949B3-FB87-46CF-9F1D-FAA170745EEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{934949B3-FB87-46CF-9F1D-FAA170745EEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{934949B3-FB87-46CF-9F1D-FAA170745EEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64F7A980-7077-4269-93F2-423419FA505B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64F7A980-7077-4269-93F2-423419FA505B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64F7A980-7077-4269-93F2-423419FA505B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64F7A980-7077-4269-93F2-423419FA505B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

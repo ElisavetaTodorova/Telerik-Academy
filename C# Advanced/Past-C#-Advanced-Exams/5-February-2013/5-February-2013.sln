@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.DurankulakNumbers", "1.DurankulakNumbers\1.DurankulakNumbers.csproj", "{BE55DC7B-EFF0-4E10-B0CE-DFC342F32FEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.JoroTheRabbit", "2.JoroTheRabbit\2.JoroTheRabbit.csproj", "{61CE6211-DBCD-4AD3-BF11-EB95A1A0DD19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.C-SharpBrackets", "4.C-SharpBrackets\4.C-SharpBrackets.csproj", "{94EE4EC9-CD30-4673-9D58-73C8DD9ACFDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE55DC7B-EFF0-4E10-B0CE-DFC342F32FEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE55DC7B-EFF0-4E10-B0CE-DFC342F32FEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE55DC7B-EFF0-4E10-B0CE-DFC342F32FEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE55DC7B-EFF0-4E10-B0CE-DFC342F32FEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61CE6211-DBCD-4AD3-BF11-EB95A1A0DD19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61CE6211-DBCD-4AD3-BF11-EB95A1A0DD19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61CE6211-DBCD-4AD3-BF11-EB95A1A0DD19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61CE6211-DBCD-4AD3-BF11-EB95A1A0DD19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94EE4EC9-CD30-4673-9D58-73C8DD9ACFDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94EE4EC9-CD30-4673-9D58-73C8DD9ACFDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94EE4EC9-CD30-4673-9D58-73C8DD9ACFDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94EE4EC9-CD30-4673-9D58-73C8DD9ACFDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
