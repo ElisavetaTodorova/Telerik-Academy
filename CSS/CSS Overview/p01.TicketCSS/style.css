@@ -1,0 +1,35 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+table{
+  background-color: rgb(96, 96, 96);
+  width: 400px;
+  height: 250px;
+}
+th{text-align: left;
+  color: rgb(160, 160, 160);
+      }
+  .title{
+    color:rgb(255, 255, 255);
+    font-style: italic;
+  }
+.second{
+  color: rgb(255, 255, 204);
+
+}
+#red{
+  color: red;
+}
+.last{
+  color: rgb(255, 128, 0);
+}
+.gray{
+  color: rgb(192, 192, 192);
+}
+img{
+  height: 16px;
+}
+tr, td {
+    padding:  0 10px 5px 0;
+}

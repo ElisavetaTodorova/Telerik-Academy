@@ -1,0 +1,36 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.header{
+  color: white;
+  background-color: #52b506;
+}
+table {
+    border-collapse: collapse;
+}
+
+table, td {
+    border: 1px solid #c0bea4;
+}
+td {
+    padding: 6px;
+    text-align: left;
+}
+.pic{
+    height: 12px;
+}
+input[type="checkbox"]{
+  box-shadow:inset 0 0 10px gray;
+}
+.white{
+  background-color: white;
+}
+.gray{
+  background-color: #ececd8;
+}
+
+#checked{
+    
+}

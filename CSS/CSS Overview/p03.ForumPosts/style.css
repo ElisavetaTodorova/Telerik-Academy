@@ -1,0 +1,37 @@
+body{
+    background-color: #a9a9a9;
+}
+h1{
+    color: #fafad2;
+}
+ #head{
+     text-align: center;
+}
+
+li{
+    text-align: center;
+    list-style-type: none;
+    color: white;
+}
+
+li a {
+    color: white;
+    font-size: 23px;
+    text-decoration: none;
+
+}
+.current{
+   background-color: #d3d3d3;
+}
+
+#last{
+    text-decoration: underline;
+}
+#lastF{
+    text-align: center;
+    font-weight: bold;
+}
+.minkoLinks{
+    text-decoration: none;
+    color: black;
+}
