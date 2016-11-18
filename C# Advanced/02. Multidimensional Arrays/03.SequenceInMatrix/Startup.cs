@@ -8,100 +8,109 @@ namespace _03.SequenceInMatrix
 {
     class Startup
     {
-        static void Main()
+        static void Main(string[] args)
+        { 
+            //input and values
+            string[] input = Console.ReadLine().Split(' ');
+            int n = int.Parse(input[0]);  //rows
+            int m = int.Parse(input[1]);  //cols
+
+            string[,] MasterMatrix = new string[n, m]; //create Master Matrix from user's values
+            for (int row = 0; row < n; row++)
+            {
+                string[] tempStr = Console.ReadLine().Split(' ');
+                for (int col = 0; col < m; col++)
+                {
+                    MasterMatrix[row, col] = tempStr[col];
+                }
+            }
+
+            int[,] longestSequenceMatrix = new int[n, m]; //this matrix will keep only the number of equal elements. This is "dynamic programing" technique. See: 01.Arrays\18.RemoveElementsFromArray
+            for (int row = 0; row < n; row++) //define all element with value "1"
+            {
+                for (int col = 0; col < m; col++)
+                {
+                    longestSequenceMatrix[row, col] = 1;
+                }
+            }
+
+            //calculation
+            MasterMatrixCalculation(n, m, MasterMatrix, longestSequenceMatrix);
+            //print
+            int result = 0;
+            for (int row = 0; row < n; row++)
+            {
+                for (int col = 0; col < m; col++)
+                {
+                    if (result < longestSequenceMatrix[row, col])
+                    {
+                        result = longestSequenceMatrix[row, col];
+                    }
+                }
+            }
+            Console.WriteLine(result);
+        }
+
+        static void MasterMatrixCalculation(int n, int m, string[,] MasterMatrix, int[,] longestSequenceMatrix)
         {
-            var dimentions = Console.ReadLine().Split(' ')
-                                              .Select(int.Parse)
-                                              .ToArray();
-            int m = dimentions[0];
-            int n = dimentions[1];
-
-            var array = new int[m, n];
-            for (int i = 0; i < m; i++)
+            //matrix
+            for (int row = 0; row < n; row++)
             {
-                var currentNumbers = Console.ReadLine().Split(' ')
-                                               .Select(int.Parse)
-                                               .ToArray();
-
-                for (int j = 0; j < n; j++)
+                for (int col = 0; col < m; col++)
                 {
-                    array[i, j] = currentNumbers[j];
-                }
-            }
-
-            int maxCount = 0;
-            int currentCount = 1;
-            //checking the rows
-            for (int i = 0; i < array.GetLength(0); i++)
-            {
-                currentCount = 1;
-                for (int j = 0; j < array.GetLength(1) - 1; j++)
-                {
-                    if (array[i, j] == array[i, j + 1])
+                    //create a sub matrix for check each element of master matrix
+                    //top side
+                    for (int top = 0; top < 3; top++)
                     {
-                        currentCount++;
-                    }
-                    else
-                    {
-                        if (maxCount < currentCount)
+                        if (((row - 1) < 0) || (((col - 1) + top < 0) || (((col - 1) + top) > m - 1)))
                         {
-                            maxCount = currentCount;
-                        }
-
-                        currentCount = 1;
-                    }
-                }
-            }
-            //by cols
-            for (int i = 0; i < array.GetLength(1); i++)
-            {
-                 currentCount = 1;
-                for (int j = 0; j < array.GetLength(0) - 1; j++)
-                {
-                    if (array[j, i] == array[j + 1, i])
-                    {
-                        currentCount++;
-                    }
-                    else
-                    {
-                        if (maxCount < currentCount)
-                        {
-                            maxCount = currentCount;
-                        }
-
-                        currentCount = 1;
-                    }
-                }
-            }
-            //diagonal
-            string bestString = "";
-            for (int i = 0; i < array.GetLength(0) - 1; i++)
-            {
-                for (int j = 0; j < array.GetLength(1) - 1; j++)
-                {
-                    currentCount = 1;
-                    for (int row = i, col = j; row < array.GetLength(0) - 1 && col < array.GetLength(1) - 1; row++, col++)
-                    {
-                        if (array[row, col] == array[row + 1, col + 1])
-                        {
-                            currentCount++;
+                            continue;
                         }
                         else
                         {
-                            currentCount = 1;
-                            break;
+                            if (MasterMatrix[(row - 1), ((col - 1) + top)] == MasterMatrix[row, col])
+                            {
+                                longestSequenceMatrix[row, col] += longestSequenceMatrix[(row - 1), ((col - 1) + top)];
+                                longestSequenceMatrix[(row - 1), ((col - 1) + top)] = 0;
+                            }
                         }
-
-                        if (currentCount > maxCount)
+                    }
+                    //right side
+                    if (!((col + 1) > m - 1))
+                    {
+                        if (MasterMatrix[row, (col + 1)] == MasterMatrix[row, col])
                         {
-                            maxCount = currentCount;
-                            bestString = array[row, col];
+                            longestSequenceMatrix[row, col] += longestSequenceMatrix[row, (col + 1)];
+                            longestSequenceMatrix[row, (col + 1)] = 0;
+                        }
+                    }
+                    //left side
+                    if (!((col - 1) < 0))
+                    {
+                        if (MasterMatrix[row, (col - 1)] == MasterMatrix[row, col])
+                        {
+                            longestSequenceMatrix[row, col] += longestSequenceMatrix[row, (col - 1)];
+                            longestSequenceMatrix[row, (col - 1)] = 0;
+                        }
+                    }
+                    //bottom side
+                    for (int bottom = 0; bottom < 3; bottom++)
+                    {
+                        if (((row + 1) > n - 1) || (((col - 1) + bottom < 0) || (((col - 1) + bottom) > m - 1)))
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            if (MasterMatrix[(row + 1), ((col - 1) + bottom)] == MasterMatrix[row, col])
+                            {
+                                longestSequenceMatrix[row, col] += longestSequenceMatrix[(row + 1), ((col - 1) + bottom)];
+                                longestSequenceMatrix[(row + 1), ((col - 1) + bottom)] = 0;
+                            }
                         }
                     }
                 }
-
             }
-
         }
     }
 }
