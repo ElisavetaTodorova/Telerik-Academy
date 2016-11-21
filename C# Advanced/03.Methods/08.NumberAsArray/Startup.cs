@@ -8,44 +8,57 @@ namespace _08.NumberAsArray
 {
     class Startup
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            var arraySizes = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            int[] size = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            string[] firstArr = Console.ReadLine().Split(' ').ToArray();
+            string[] secondArr = Console.ReadLine().Split(' ').ToArray();
 
-            int firstArraySize = arraySizes[0];
-            int secondArraySize = arraySizes[1];
+            ReverseAndCalculate(size, firstArr, secondArr);
+        }
 
-            var firstArray = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-            var secondArray = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-
-            var latgerSize = firstArraySize > secondArraySize ? firstArraySize : secondArraySize;
-
-            var sumedArray = new int[latgerSize];
-
-            int rest = 0;
-            for (int i = 0; i < latgerSize; i++)
+        static void ReverseAndCalculate(int[] size, string[] firstArr, string[] secondArr)
+        {
+            StringBuilder sum = new StringBuilder();
+            int firstNum = 0;
+            int secondNum = 0;
+            int increaseWithOne = 0;
+            int maxSize = size.Max();
+            //calculation
+            for (int i = 0; i <= maxSize - 1; i++)
             {
-                int firstNumber = 0;
-                int seconNumber = 0;
-                if (i < firstArraySize)
+                //first number/array
+                if (i <= size[0] - 1)
                 {
-                    firstNumber = firstArray[i];
+                    firstNum = int.Parse(firstArr[i]);
                 }
-
-                if (i < secondArraySize)
+                else
                 {
-                    seconNumber = secondArray[i];
+                    firstNum = 0;
                 }
+                //second number/array
+                if (i <= size[1] - 1)
+                {
+                    secondNum = int.Parse(secondArr[i]);
+                }
+                else
+                {
+                    secondNum = 0;
+                }
+                //first + second
+                sum.Append(((firstNum + secondNum + increaseWithOne) % 10) + " ");
 
-                int sum = firstNumber + seconNumber;
-
-                sumedArray[i] = sum % 10 + rest;
-
-                rest = sum / 10;
+                if ((firstNum + secondNum + increaseWithOne) > 9)
+                {
+                    increaseWithOne = 1;
+                }
+                else
+                {
+                    increaseWithOne = 0;
+                }
             }
-
-            Console.WriteLine(string.Join(" ", sumedArray));
-
+            //print
+            Console.WriteLine(sum);
         }
     }
 }
