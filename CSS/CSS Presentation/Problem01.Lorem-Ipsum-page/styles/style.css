@@ -1,0 +1,14 @@
+#container{
+    color: #0094ff;
+    font-family: Consolas, Edwardian Script ITC;
+}
+
+#container::first-letter{
+    font-family:Edwardian Script ITC;
+     font-size: 50px;
+}
+
+#container::first-line{
+    font-weight: bold;
+
+}
