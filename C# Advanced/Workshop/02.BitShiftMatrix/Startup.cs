@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Numerics;
 
 namespace _02.BitShiftMatrix
 {
@@ -16,7 +14,7 @@ namespace _02.BitShiftMatrix
 
             var moves = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
-            var matrix = new int[matrixRow, matrixCol];
+            var matrix = new BigInteger[matrixRow, matrixCol];
             FillMatrix(matrix, matrixRow, matrixCol);
 
             var coef = Math.Max(matrixCol, matrixRow);
@@ -24,7 +22,7 @@ namespace _02.BitShiftMatrix
             var strartRow = matrixRow - 1;
             var startCol = 0;
 
-            long sum = 0;
+            BigInteger sum = 0;
 
             foreach (var move in moves)
             {
@@ -74,13 +72,14 @@ namespace _02.BitShiftMatrix
 
         }
 
-        private static void FillMatrix(int[,] matrix, int row, int col)
+        private static void FillMatrix(BigInteger[,] matrix, int row, int col)
         {
+            BigInteger one = 1;
             for (int i = 0; i < row; i++)
             {
                 for (int j = 0; j < col; j++)
                 {
-                    matrix[i, j] = 1 << (row - 1 - i + j);
+                    matrix[i, j] = one << (row - 1 - i + j);
                 }
             }
         }
