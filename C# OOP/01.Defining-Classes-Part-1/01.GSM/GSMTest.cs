@@ -18,7 +18,7 @@ namespace _01.GSM
             nokia.AddCall(call);
             nokia.RemoveCall(call);
 
-            Console.WriteLine(nokia.CallPrice(0.37));
+            Console.WriteLine(MobilePhone.Iphone4S.ToString());
 
             Console.WriteLine(nokia.ToString());
         }

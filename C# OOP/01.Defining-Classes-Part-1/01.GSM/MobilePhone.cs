@@ -8,6 +8,8 @@ namespace _01.GSM
 {
     public class MobilePhone
     {
+        private static MobilePhone iphone4S = new MobilePhone("4S", "Apple");
+
         public MobilePhone(string model, string manufacturer)
         {
             this.Model = model;
@@ -16,6 +18,14 @@ namespace _01.GSM
             this.Display = null;
             this.Battery = null;
             this.Calls = new List<Call>();
+        }
+
+        public static MobilePhone Iphone4S
+        {
+            get
+            {
+                return iphone4S;
+            }
         }
 
         public List<Call> Calls { get; private set; }
@@ -46,7 +56,7 @@ namespace _01.GSM
             {
                 battery = this.Battery.ToString();
             }
-            return string.Format("{0} {1} {2} {3} {4} {5}", this.Model
+            return string.Format("Model: {0}\r\nManufacturer: {1}\r\nPrice: {2}\r\nOwner: {3}\r\nBattery: {4}\r\nDisplay: {5}", this.Model
                                                               , this.Manufacturer, this.Price
                                                               , this.Owner, battery
                                                               , display);

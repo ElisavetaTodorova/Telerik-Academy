@@ -22,7 +22,8 @@ namespace _01.GSM
 
         public override string ToString()
         {
-            return string.Format("{0} {1} {2} {3}", this.Model, this.HoursIdle, this.HoursTalk, this.BatteryType);
+            return string.Format("Model: {0}, Hours idle: {1}, Hours talk: {2} ,Battery type: {3}",
+                                                this.Model, this.HoursIdle, this.HoursTalk, this.BatteryType);
         }
 
 
